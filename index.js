@@ -222,6 +222,9 @@
   }
 
   function onStateChange(event, curState, prevState) {
+    if (curState.heroImageLoaded && !prevState.heroImageLoaded)
+      showContent();
+
     if ((curState.articleVisible && !prevState.articleVisible) ||
         curState.viewportWidth !== prevState.viewportWidth)
       chartWeight();
@@ -240,9 +243,6 @@
 
     if (curState.chartIsFullyInView && !curState.weightLineDrawn)
       animateWeightLine();
-
-    if (curState.heroImageLoaded && !prevState.heroImageLoaded)
-      showContent();
 
     if (!curState.headerImageIsSized && curState.heroImageLoaded)
       setHeaderImageSize();
