@@ -214,6 +214,12 @@
   function showContent() {
     $('#loading').hide();
     $('#content').removeClass('invisible')
+
+    $('[data-appear]').each(function(i, el) {
+      setTimeout(function() {
+        $(el).css('visibility', 'visible').trigger('appear');
+      }, +$(el).data('appear') * 350);
+    });
   }
 
   function setHeaderImageSize() {
@@ -280,12 +286,6 @@
     var prop = hasImpact? 'compressor-impact' : 'compressor';
 
     $(el).fitText($(el).data(prop));
-  });
-
-  $('[data-appear]').each(function(i, el) {
-    setTimeout(function() {
-      $(el).css('visibility', 'visible').trigger('appear');
-    }, +$(el).data('appear') * 350);
   });
 
   var preload = new Image();
