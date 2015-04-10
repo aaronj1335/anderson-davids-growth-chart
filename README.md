@@ -1,5 +1,5 @@
 <div style="text-align: center">
-# &#9759; this lil guy tho &#9759;
+  <h1>&#9759; this lil guy tho &#9759;</h1>
 </div>
 
 <div style="text-align: center">
