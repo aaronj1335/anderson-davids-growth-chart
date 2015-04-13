@@ -115,7 +115,7 @@
         .attr('x', width)
         .attr('y', -5)
         .style('text-anchor', 'end')
-        .text('Days on Earth');
+        .text('Days since launch');
 
 
     svg.append('g')
