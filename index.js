@@ -57,7 +57,8 @@
     {when: "2015-04-07T15:48:00.000Z", weight: 8 +  5 / 16},
     {when: "2015-04-10T20:00:00.000Z", weight: 8          },
     {when: "2015-04-13T19:00:00.000Z", weight: 8 +  9 / 16},
-    {when: "2015-04-17T19:00:00.000Z", weight: 8 + 15 / 16}
+    {when: "2015-04-17T19:00:00.000Z", weight: 8 + 15 / 16},
+    {when: "2015-09-05T19:00:00.000Z", weight: 16         }
   ];
   var start = new Date(weights[0].when).valueOf();
   var hasImpact = false;
